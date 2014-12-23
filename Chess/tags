@@ -1,0 +1,53 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Bing	model.py	/^class Bing(ChessPiece):$/;"	c
+ChessBoard	model.py	/^class ChessBoard(object):$/;"	c
+ChessGame	main.py	/^class ChessGame(object):$/;"	c
+ChessPiece	model.py	/^class ChessPiece(object):$/;"	c
+ChessView	view.py	/^class ChessView(object):$/;"	c
+Jiang	model.py	/^class Jiang(ChessPiece):$/;"	c
+Ju	model.py	/^class Ju(ChessPiece):$/;"	c
+Ma	model.py	/^class Ma(ChessPiece):$/;"	c
+Pao	model.py	/^class Pao(ChessPiece):$/;"	c
+Shi	model.py	/^class Shi(ChessPiece):$/;"	c
+Xiang	model.py	/^class Xiang(ChessPiece):$/;"	c
+__init__	main.py	/^	def __init__(self):$/;"	m	class:ChessGame
+__init__	model.py	/^	def __init__(self):$/;"	m	class:ChessBoard
+__init__	model.py	/^	def __init__(self):$/;"	m	class:ChessPiece
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Bing
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Jiang
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Ju
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Ma
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Pao
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Shi
+__init__	model.py	/^	def __init__(self, color):$/;"	m	class:Xiang
+__init__	view.py	/^	def __init__(self, control):	$/;"	m	class:ChessView
+button_1_callback	main.py	/^	def button_1_callback(self, event):$/;"	m	class:ChessGame
+can	test.py	/^can = Tkinter.Canvas(root, width=373, height=410)$/;"	v
+do_mouse	test.py	/^def do_mouse(event):$/;"	f
+draw	view.py	/^	def draw(self, board):$/;"	m	class:ChessView
+game	main.py	/^game = ChessGame()$/;"	v
+get_coord	test.py	/^def get_coord(x):$/;"	f
+get_coord	view.py	/^	def get_coord(self, x):$/;"	m	class:ChessView
+get_idx	test.py	/^def get_idx(x):$/;"	f
+get_idx	view.py	/^	def get_idx(self, x):$/;"	m	class:ChessView
+image_RK	test.py	/^image_RK = can.create_image(get_coord(4), get_coord(0), image=img_RK)$/;"	v
+image_mapping	view.py	/^image_mapping = {$/;"	v
+img	test.py	/^img = Tkinter.PhotoImage(file=".\/images\/WHITE.gif")$/;"	v
+img_RK	test.py	/^img_RK = Tkinter.PhotoImage(file=".\/images\/RK.gif")$/;"	v
+mainloop	view.py	/^	def mainloop(self):$/;"	m	class:ChessView
+move	model.py	/^	def move(self, x, y, dx, dy):$/;"	m	class:ChessBoard
+move_check	model.py	/^	def move_check(self):$/;"	m	class:ChessPiece
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Bing
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Jiang
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Ju
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Ma
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Pao
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Shi
+move_check	model.py	/^	def move_check(self, dx, dy):$/;"	m	class:Xiang
+root	test.py	/^root = Tkinter.Tk()$/;"	v
+start	main.py	/^	def start(self):$/;"	m	class:ChessGame

@@ -12,8 +12,9 @@ def load_line_data_set(filename, s="\t"):
 def load_dict(filename, s="\t"):
 	d = {}
 
-	data = load_line_data_set(filename, s)
-	d = dict(data)
+	for line in file(filename):
+		terms = line.rstrip().split(s)
+		d[terms[0]] = line
 
 	return d
 

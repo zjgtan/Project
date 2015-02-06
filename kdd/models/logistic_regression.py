@@ -1,8 +1,8 @@
 from dataframe import *
 
 
-training_set = "data/sub_training.txt"
-val_set = "data/validation.txt"
+training_set_file = "data/sub_training.txt"
+val_set_file = "data/validation.txt"
 
 description_word_weight = load_dict("data/description_tf_idf.txt")
 query_word_weight = load_dict("data/query_tf_idf.txt")
@@ -15,5 +15,5 @@ ctr_user = load_dict("data/ctr_user.txt")
 ctr_query = load_dict("data/ctr_query.txt")
 
 
-
+for line in file(:)
 

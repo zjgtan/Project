@@ -24,5 +24,3 @@ def dump_dict(filename, d, s="\t"):
 		print >>fd, s.join(map(str, [key, value]))
 	fd.close()
 
-d = {"1":2}
-dump_dict("test.txt", d)

@@ -4,7 +4,7 @@ import sys
 import dataframe
 import math
 
-data_set = "test.txt"
+data_set = "./data/sub_training.txt"
 
 #Click Through Rate
 ctr_cols = ["ad", "advertiser", "query", "user"]
@@ -65,6 +65,7 @@ title_dict = dataframe.load_dict("../track2/titleid_tokensid.txt")
 query_dict = dataframe.load_dict("../track2/queryid_tokensid.txt")
 description_dict = dataframe.load_dict("../track2/descriptionid_tokensid.txt")
 keyword_dict = dataframe.load_dict("../track2/purchasedkeywordid_tokensid.txt")
+user_dict = dataframe.load_dict("../track2/userid_profile.txt", flag=False)
 
 
 if "TF-IDF" in sys.argv:

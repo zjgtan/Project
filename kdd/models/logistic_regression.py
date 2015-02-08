@@ -42,7 +42,7 @@ def data_construct(filename):
 		ins_sparse["QUERY."+terms[QUERY]] = 1
 		ins_sparse["POSITIONDEPTH."+terms[POSITION]+"."+terms[DEPTH]] = 1
 
-		if terms[USER] == '0':
+		if terms[USER] == '0' or terms[USER] not in user_dict:
 			continue
 
 		uid, gender, age = user_dict[terms[USER]].rstrip().split("\t")

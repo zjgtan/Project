@@ -46,6 +46,7 @@ def compute_tf_idf(table):
 
 	N_doc = len(df)
 
+	print "doc frequency"
 	doc_freq = {}
 	for (id, text) in df.values:
 		words = set(text.rstrip().split("|"))
@@ -55,31 +56,38 @@ def compute_tf_idf(table):
 
 	query = """
 	CREATE TABLE tf_idf_{0} (
-	id VARCHAR(10),
-	word VARCHAR(10),
-	weight FLOAT
+	id VARCHAR(20),
+	weight TEXT
 	)
 	""".format(table)
 
-	con.execute(query)
-	con.commit()
+	try:
+		con.execute(query)
+		con.commit()
+	except:
+		pass
 
-	for (id, text) in df.values:
+	print "word weight"
+	count = 0
+	for idx, (id, text) in enumerate(df.values):
+		if idx == int(len(df.values) * 0.01 * count):
+			print count
+			count += 10
 		words_count = pd.Series(text.rstrip().split("|")).value_counts().to_dict()
-		words_tf_idf = {}
+		words_tf_idf = []
 		for word in words_count:
 			tf = words_count[word] * 1.0 / sum(words_count.values())
 			idf = math.log(N_doc * 1.0/ (doc_freq[word] + 1))
 
 			tf_idf = tf * idf
+			words_tf_idf.append((word, str(tf_idf)))
 
-			query = "INSERT INTO tf_idf_{0} (id, word, weight) values (?, ?, ?)".format(table)
+		weights = ",".join(map(":".join, words_tf_idf))
+		query = "INSERT INTO tf_idf_{0} (id, weight) values (?, ?)".format(table)
 
-			con.execute(query)
-			con.commit()
-			con.close()
-
-
+		con.execute(query, (id+'.'+word, weights))
+		con.commit()
+	con.close()
 	
 print "load query"
 compute_tf_idf("query")
